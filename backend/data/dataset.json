@@ -1,0 +1,359 @@
+{
+  "nodes": {
+    "Plant": {
+      "lat": 28.6139,
+      "lng": 77.209,
+      "type": "plant",
+      "status": "collected"
+    },
+    "Village A": {
+      "lat": 28.625,
+      "lng": 77.215,
+      "type": "village",
+      "status": "uncollected",
+      "demandLevel": "High",
+      "predictedDemand": "High"
+    },
+    "Village B": {
+      "lat": 28.61,
+      "lng": 77.23,
+      "type": "village",
+      "status": "uncollected",
+      "demandLevel": "Medium",
+      "predictedDemand": "Low"
+    },
+    "Village C": {
+      "lat": 28.64,
+      "lng": 77.19,
+      "type": "village",
+      "status": "collected",
+      "demandLevel": "Low",
+      "predictedDemand": "Low"
+    },
+    "Village D": {
+      "lat": 28.65,
+      "lng": 77.24,
+      "type": "village",
+      "status": "uncollected",
+      "demandLevel": "High",
+      "predictedDemand": "Low"
+    },
+    "Village E": {
+      "lat": 28.59,
+      "lng": 77.18,
+      "type": "village",
+      "status": "collected",
+      "demandLevel": "Low",
+      "predictedDemand": "High"
+    },
+    "Village F": {
+      "lat": 28.58,
+      "lng": 77.22,
+      "type": "village",
+      "status": "uncollected",
+      "demandLevel": "Medium",
+      "predictedDemand": "High"
+    },
+    "Village G": {
+      "lat": 28.67,
+      "lng": 77.25,
+      "type": "village",
+      "status": "uncollected",
+      "demandLevel": "High",
+      "predictedDemand": "Medium"
+    },
+    "Village K": {
+      "lat": 28.646043536946106,
+      "lng": 77.21838413781116,
+      "type": "village",
+      "status": "uncollected",
+      "demandLevel": "High",
+      "predictedDemand": "High"
+    },
+    "village n": {
+      "lat": 28.580792036521245,
+      "lng": 77.21083103765399,
+      "type": "village",
+      "status": "uncollected",
+      "demandLevel": "High"
+    }
+  },
+  "edges": {
+    "Plant": {
+      "Village A": {
+        "distance": 10,
+        "time": 15
+      },
+      "Village B": {
+        "distance": 15,
+        "time": 20
+      },
+      "Village C": {
+        "distance": 20,
+        "time": 35
+      },
+      "Village K": {
+        "distance": 5,
+        "time": 7
+      },
+      "village n": {
+        "distance": 5,
+        "time": 7
+      }
+    },
+    "Village A": {
+      "Plant": {
+        "distance": 10,
+        "time": 15
+      },
+      "Village D": {
+        "distance": 12,
+        "time": 18
+      },
+      "Village E": {
+        "distance": 5,
+        "time": 68,
+        "isCongested": true
+      }
+    },
+    "Village B": {
+      "Plant": {
+        "distance": 15,
+        "time": 20
+      },
+      "Village D": {
+        "distance": 8,
+        "time": 12
+      },
+      "Village F": {
+        "distance": 10,
+        "time": 16
+      }
+    },
+    "Village C": {
+      "Plant": {
+        "distance": 20,
+        "time": 35
+      },
+      "Village F": {
+        "distance": 5,
+        "time": 7
+      }
+    },
+    "Village D": {
+      "Village A": {
+        "distance": 12,
+        "time": 18
+      },
+      "Village B": {
+        "distance": 8,
+        "time": 12
+      },
+      "Village G": {
+        "distance": 7,
+        "time": 10
+      }
+    },
+    "Village E": {
+      "Village A": {
+        "distance": 5,
+        "time": 68,
+        "isCongested": true
+      },
+      "Village G": {
+        "distance": 10,
+        "time": 15
+      }
+    },
+    "Village F": {
+      "Village B": {
+        "distance": 10,
+        "time": 16
+      },
+      "Village C": {
+        "distance": 5,
+        "time": 7
+      },
+      "Village G": {
+        "distance": 15,
+        "time": 25
+      }
+    },
+    "Village G": {
+      "Village D": {
+        "distance": 7,
+        "time": 10
+      },
+      "Village E": {
+        "distance": 10,
+        "time": 15
+      },
+      "Village F": {
+        "distance": 15,
+        "time": 25
+      }
+    },
+    "Village K": {
+      "Plant": {
+        "distance": 5,
+        "time": 7
+      }
+    },
+    "village n": {
+      "Plant": {
+        "distance": 5,
+        "time": 7
+      }
+    }
+  },
+  "vehicles": [
+    {
+      "id": "V-101",
+      "capacity": 120,
+      "currentLocation": "Plant",
+      "status": "idle",
+      "route": []
+    },
+    {
+      "id": "V-102",
+      "capacity": 150,
+      "currentLocation": "Village F",
+      "status": "en_route",
+      "route": [
+        "Village F",
+        "Village B",
+        "Plant"
+      ]
+    }
+  ],
+  "suppliers": [
+    {
+      "id": 1,
+      "name": "Ramesh Singh",
+      "location": "Village A",
+      "wasteQuantity": 50,
+      "status": "Pending"
+    },
+    {
+      "id": 2,
+      "name": "Suresh Kumar",
+      "location": "Village B",
+      "wasteQuantity": 75,
+      "status": "Pending"
+    },
+    {
+      "id": 3,
+      "name": "Amit Patel",
+      "location": "Village D",
+      "wasteQuantity": 120,
+      "status": "Pending"
+    },
+    {
+      "id": 4,
+      "name": "Vivek Anand",
+      "location": "Village K",
+      "wasteQuantity": 30,
+      "status": "Pending"
+    },
+    {
+      "id": 5,
+      "name": "harsh",
+      "location": "village n",
+      "wasteQuantity": 29,
+      "status": "Pending"
+    }
+  ],
+  "analytics": {
+    "totalWasteNodes": 7,
+    "efficiencyPercent": 87,
+    "costReduction": 12500,
+    "wasteDistribution": [
+      {
+        "name": "Village A",
+        "value": 50
+      },
+      {
+        "name": "Village B",
+        "value": 75
+      },
+      {
+        "name": "Village C",
+        "value": 0
+      },
+      {
+        "name": "Village D",
+        "value": 120
+      }
+    ],
+    "efficiencyGainOverMonths": [
+      {
+        "month": "Jan",
+        "gain": 60
+      },
+      {
+        "month": "Feb",
+        "gain": 65
+      },
+      {
+        "month": "Mar",
+        "gain": 72
+      },
+      {
+        "month": "Apr",
+        "gain": 80
+      },
+      {
+        "month": "May",
+        "gain": 87
+      }
+    ],
+    "transportCostOverMonths": [
+      {
+        "month": "Jan",
+        "cost": 50000
+      },
+      {
+        "month": "Feb",
+        "cost": 48000
+      },
+      {
+        "month": "Mar",
+        "cost": 45000
+      },
+      {
+        "month": "Apr",
+        "cost": 40000
+      },
+      {
+        "month": "May",
+        "cost": 37500
+      }
+    ],
+    "carbonOffsetOverMonths": [
+      {
+        "month": "Jan",
+        "co2SavedKg": 120
+      },
+      {
+        "month": "Feb",
+        "co2SavedKg": 165
+      },
+      {
+        "month": "Mar",
+        "co2SavedKg": 210
+      },
+      {
+        "month": "Apr",
+        "co2SavedKg": 285
+      },
+      {
+        "month": "May",
+        "co2SavedKg": 350
+      }
+    ]
+  },
+  "environment": {
+    "weather": "Clear",
+    "festival": false
+  }
+}
