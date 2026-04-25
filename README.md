@@ -44,8 +44,4 @@ Run the Vite Dev Server:
 npm run dev
 ```
 
-### 3. Usage & Examiner Walkthrough
-- Go to `localhost:5173`.
-- Navigate to `/signup` to generate an initial user JWT to gain entry to the dashboard.
-- **For Simulation**: Navigate to the Dashboard, click any Edge/Line on the Google Map, and enter a high simulated traffic waiting time. Observe routing recalculations.
-- **For Analytics**: Navigate to the `Algorithmic Proof` tab in the sidebar and execute the runtime benchmarking tool. Export the PDF output.
+
